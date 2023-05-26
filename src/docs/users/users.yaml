@@ -1,0 +1,24 @@
+paths:
+  /:email:
+    get:
+      summary: Obtener información de todos los usuarios
+      tags:
+        - Users
+      responses:
+        200:
+          description: Respuesta exitosa
+          content:
+            application/json:
+              schema:
+                # Especifica la estructura del cuerpo de la respuesta
+                type: object
+                properties:
+                  users:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/User'
+  
+
+     
+        
+

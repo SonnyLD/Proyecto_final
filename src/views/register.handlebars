@@ -1,0 +1,26 @@
+<h1>Fill the form and create your account!</h1>
+
+<form action="/api/passport/signup" method="POST">
+  <div class="mb-6">
+    <label class="form-label" for="firstName">First name</label>
+    <input type="text" class="form-control" id="firstName" required="true" name="firstName">
+  </div>
+    <div class="mb-6">
+    <label class="form-label" for="lastName">Last name</label>
+    <input type="text" class="form-control" id="lastName" required="true" name="lastName">
+  </div>
+    <div class="mb-6">
+    <label class="form-label" for="age">Age</label>
+    <input type="number" class="form-control" id="age" required="true" name="age">
+  </div>
+  <div class="mb-6">
+    <label class="form-label" for="email">E-mail</label>
+    <input type="email" class="form-control" id="email" required="true" placeholder="user@example.com" name="email">
+  </div>
+  <div class="mb-6">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" required="true" name="password">
+  </div>
+  <button type="/" class="btn btn-primary">Register</button>
+  <div>If you already have an account login <a href="/">here</a>.</div>
+</form>

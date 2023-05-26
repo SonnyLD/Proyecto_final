@@ -1,0 +1,30 @@
+
+
+<h1>Products</h1>
+
+<div id='listContainer' class='list-group flex-row flex-wrap gap-5 justify-content-center'>
+{{#each docs}}
+  <div class="card" style="width: 18rem;">
+    <div class="card-body justify-content-center d-flex flex-column">
+    <h3 class="card-title">{{this.title}}</h3>
+    <p class="card-text">description:{{this.description}}</p>
+    <p class="card-text">price:{{this.price}}</p>
+    <p class="card-text">thumbnail:{{this.thumbnail}}</p>
+    <p class="card-text">stock:{{this.stock}}</p>  
+    <p class="card-text">code:{{this.code}}</p>  
+    <p class="card-text">category:{{this.category}}</p>  
+    <p class="card-text">status:{{this.status}}</p>
+    <button class="add-to-cart" data-product-id="{{idProduct}}">Add to Cart</button>  
+    </div> 
+  </div>
+{{/each}}
+</div>
+<div class='btn-group d-flex gap-3'  role='group' aria-label='Basic example'>
+{{#if prevPage}}
+<a href="/products?page={{prevPage}}"><button type='button' class='btn btn-primary'>Anterior</button></a>
+{{/if}}
+<button  disabled="true" class='btn btn-primary'>{{page}}</button>
+{{#if nextPage}}
+<a href="/products?page={{nextPage}}"><button type='button' class='btn btn-primary'>Siguiente</button></a>
+{{/if}}
+</div>
